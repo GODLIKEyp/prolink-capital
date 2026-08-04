@@ -1,0 +1,419 @@
+/* ================================================================
+   ServiceDetailLayout — Modern, high-converting service pages
+   ================================================================ */
+
+/* ─── HERO ─── */
+.sdl-hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+}
+
+.sdl-hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  max-width: 700px;
+}
+
+.sdl-hero__subtitle {
+  font-size: 1.15rem;
+  color: var(--slate-light);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.sdl-hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn--lg {
+  padding: 0.875rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-outline:hover {
+  border-color: var(--emerald-light);
+  background: rgba(255,255,255,0.06);
+  color: var(--emerald-light);
+}
+
+/* ─── SECTION TITLES ─── */
+.sdl-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ─── FEATURES GRID ─── */
+.sdl-features {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.sdl-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sdl-features__grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sdl-feature-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--bg-gray);
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(10,25,47,0.04);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.sdl-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(10,25,47,0.08);
+}
+
+.sdl-feature-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(10,25,47,0.06));
+  border-radius: 12px;
+  color: var(--emerald-dark);
+}
+
+.sdl-feature-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.sdl-feature-card__desc {
+  font-size: 0.92rem;
+  color: var(--slate-dark);
+  line-height: 1.6;
+}
+
+/* ─── EMI CALCULATOR SECTION ─── */
+.sdl-emi {
+  padding: 5rem 0;
+  background: var(--bg-light);
+}
+
+.sdl-emi__desc {
+  text-align: center;
+  max-width: 700px;
+  margin: -1.5rem auto 2.5rem;
+  color: var(--slate-dark);
+  line-height: 1.7;
+}
+
+.sdl-emi .emi-section {
+  padding: 0;
+  background: transparent;
+}
+
+.sdl-emi .emi-section .section-header {
+  display: none; /* hide internal header since we have our own */
+}
+
+/* ─── ELIGIBILITY TABS ─── */
+.sdl-eligibility {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.sdl-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.sdl-tab {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid var(--bg-gray);
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--slate-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sdl-tab:hover {
+  border-color: var(--emerald-light);
+  color: var(--navy);
+}
+
+.sdl-tab--active {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.sdl-tab-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: var(--bg-light);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid var(--bg-gray);
+  animation: fadeSlideUp 0.35s ease-out;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sdl-tab-panel__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-gray);
+}
+
+/* Check list */
+.sdl-check-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sdl-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--slate-dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.sdl-check-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+/* Document list */
+.sdl-doc-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sdl-doc-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--slate-dark);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid rgba(241,245,249,0.8);
+  transition: border-color var(--transition-fast);
+}
+
+.sdl-doc-list li:hover {
+  border-color: var(--emerald-light);
+}
+
+.sdl-doc-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  opacity: 0.5;
+}
+
+/* ─── MID-PAGE CTA ─── */
+.sdl-cta-banner {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  text-align: center;
+}
+
+.sdl-cta-banner h2 {
+  font-size: 1.75rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.sdl-cta-banner p {
+  color: var(--slate-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ─── FEES TABLE ─── */
+.sdl-fees {
+  padding: 5rem 0;
+  background: var(--bg-light);
+}
+
+.sdl-fees__table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--bg-gray);
+  box-shadow: 0 2px 8px rgba(10,25,47,0.03);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sdl-fees__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sdl-fees__table th,
+.sdl-fees__table td {
+  padding: 1.15rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-gray);
+}
+
+.sdl-fees__table th {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sdl-fees__table th:first-child {
+  border-radius: 16px 0 0 0;
+}
+
+.sdl-fees__table th:last-child {
+  border-radius: 0 16px 0 0;
+}
+
+.sdl-fees__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sdl-fees__table tbody tr:nth-child(even) {
+  background: var(--bg-light);
+}
+
+.sdl-fees__table td {
+  color: var(--slate-dark);
+  font-size: 0.95rem;
+}
+
+.sdl-fees__note {
+  text-align: center;
+  color: var(--slate);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── EXTRA CONTENT SECTION ─── */
+.sdl-extra {
+  padding: 4rem 0 0;
+  background: var(--white);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .sdl-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sdl-hero {
+    padding: 3.5rem 0 3rem;
+    text-align: center;
+  }
+
+  .sdl-hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sdl-hero__actions {
+    justify-content: center;
+  }
+
+  .sdl-features__grid,
+  .sdl-features__grid--2col {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .sdl-feature-card {
+    flex-direction: row;
+  }
+
+  .sdl-tab-panel {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .sdl-tabs {
+    gap: 0.35rem;
+  }
+
+  .sdl-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+}

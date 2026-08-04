@@ -1,0 +1,129 @@
+.location-page {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.location-subtitle {
+  font-size: 1.15rem;
+  color: var(--slate-dark);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--emerald-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.contact-text {
+  font-size: 1.05rem;
+  color: var(--slate-dark);
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+
+.location-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.location-actions .btn {
+  padding: 0.875rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.location-actions .btn-outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  background: transparent;
+}
+
+.location-actions .btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.location-map {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(10, 25, 47, 0.08);
+  border: 1px solid var(--bg-gray);
+  background-color: var(--bg-light);
+}
+
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .location-info {
+    order: 1;
+    text-align: center;
+  }
+
+  .location-map {
+    order: 2;
+    height: 400px;
+  }
+
+  .contact-list li {
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .location-actions {
+    justify-content: center;
+  }
+}

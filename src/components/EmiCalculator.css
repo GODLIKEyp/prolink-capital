@@ -1,0 +1,278 @@
+.emi-section {
+  background-color: var(--white);
+}
+
+/* Category Tabs */
+.emi-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.emi-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 100px;
+  border: 2px solid var(--bg-gray);
+  background: var(--white);
+  color: var(--slate-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.emi-tab:hover {
+  border-color: var(--emerald-light);
+  color: var(--navy);
+}
+
+.emi-tab.active {
+  background-color: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.emi-tab-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Calculator Body */
+.emi-calculator-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--bg-light); /* Fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid var(--bg-gray);
+  box-shadow: 0 8px 30px rgba(10, 25, 47, 0.06);
+}
+
+/* Sliders */
+.emi-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.slider-value {
+  font-weight: 700;
+  color: var(--emerald-dark);
+  font-size: 1.05rem;
+}
+
+.emi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--emerald), var(--navy));
+  outline: none;
+  cursor: pointer;
+}
+
+.emi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--emerald);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.emi-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.emi-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--emerald);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slider-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--slate);
+}
+
+/* Results Panel */
+.emi-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Donut Chart */
+.emi-donut-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.emi-donut {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.donut-bg {
+  fill: none;
+  stroke: var(--bg-gray);
+  stroke-width: 3.5;
+}
+
+.donut-principal {
+  fill: none;
+  stroke: var(--emerald);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.donut-interest {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+}
+
+.emi-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emi-monthly-label {
+  font-size: 0.75rem;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.emi-monthly-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+/* Breakdown */
+.emi-breakdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.emi-breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--bg-gray);
+}
+
+.emi-breakdown-item.total {
+  border-bottom: none;
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--navy);
+}
+
+.emi-breakdown-item div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-principal {
+  background-color: var(--emerald);
+}
+
+.dot-interest {
+  background-color: var(--gold);
+}
+
+.breakdown-label {
+  color: var(--slate-dark);
+  font-size: 0.9rem;
+}
+
+.breakdown-value {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.9rem;
+}
+
+/* Apply Button */
+.emi-apply-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .emi-calculator-body {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+
+  .emi-tabs {
+    gap: 0.5rem;
+  }
+
+  .emi-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

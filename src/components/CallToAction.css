@@ -1,0 +1,54 @@
+.cta-section {
+  padding: 6rem 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.cta-box p {
+  color: var(--slate-light);
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.whatsapp-btn {
+  background-color: var(--white);
+  color: var(--navy);
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-btn:hover {
+  background-color: var(--bg-gray);
+  color: var(--navy);
+  border-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,81 @@
+.hero {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.15), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.1), transparent 40%);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  background: linear-gradient(
+    100deg,
+    var(--white) 0%,
+    var(--white) 35%,
+    #56C1FF 45%,
+    #82D4FF 50%,
+    #56C1FF 55%,
+    var(--white) 65%,
+    var(--white) 100%
+  );
+  background-size: 300% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: auraFlow 10s linear infinite;
+}
+
+@keyframes auraFlow {
+  0% {
+    background-position: -150% center;
+  }
+  100% {
+    background-position: 150% center;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--slate-light);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+  }
+}
